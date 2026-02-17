@@ -19,6 +19,8 @@ const loadAllProducts = (allProducts) => {
     .then((res)=>res.json())
     .then((data) => displayProducts(data))
 }
+
+
 //    {
 //     "id": 5,
 //     "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
@@ -30,6 +32,36 @@ const loadAllProducts = (allProducts) => {
 //       "rate": 4.6,
 //       "count": 400
 //    }
+
+const loadProductDetails = async(id) =>{
+    const url = `https://fakestoreapi.com/products/${id}`
+    const res = await fetch(url);
+    const details = await res.json();
+    displayDetails(details); 
+}
+
+const displayDetails = (prodDetails) =>{
+    console.log(prodDetails);
+    const detailsContainer = document.getElementById('details-container')
+    detailsContainer.innerHTML = `
+        <div>
+            <h1 class=" px-2 mt-3 text-2xl font-medium">${prodDetails?.title.slice(0,45)}</h1>
+            <p class="px-2 mt-1 text-sm font-medium my-2">${prodDetails?.description}</p>
+            <p class="px-2 mt-1 text-2xl font-medium">Price: $${prodDetails?.price}</p>
+            <div class="mt-3 flex gap-1 px-2 text-4xl">
+            Rating: 
+                <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
+                <p>${prodDetails?.rating?.rate}</p>
+            </div>
+            <div class="flex justify-between gap-2 px-2 mt-5">
+            <button onclick="loadProductDetails(${prodDetails?.id})" class="flex-1 btn btn-outline">Details</button>
+            <button class=" flex-1 btn btn-primary">Add To Cart</button>
+            </div>
+        </div>
+    `
+    document.getElementById("details_modal").showModal()
+    
+}
 
 const displayProducts = (products) => {
     const productContainer = document.getElementById('products-container');
@@ -52,7 +84,7 @@ const displayProducts = (products) => {
             <h1 class=" px-2 mt-3 text-2xl font-medium">${product?.title.slice(0,45)}</h1>
             <p class="px-2 mt-1 text-2xl font-medium">${product?.price}</p>
             <div class="flex justify-between gap-2 px-2 mt-5">
-            <button class="flex-1 btn btn-outline">Details</button>
+            <button onclick="loadProductDetails(${product?.id})" class="flex-1 btn btn-outline">Details</button>
             <button class=" flex-1 btn btn-primary">Add To Cart</button>
           </div>
         </div>
