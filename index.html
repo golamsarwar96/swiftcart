@@ -1,190 +1,225 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!--DaisyUI & TailwindCSS CDN-->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!--Google Fonts CDN for Poppins font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <!--DaisyUI & TailwindCSS CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!--Font Awesome CDN-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+  <!--Google Fonts CDN for Poppins font-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
 
-    <!--Custom CSS file-->
-    <link rel="stylesheet" href="./style.css" />
+  <!--Font Awesome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <title>Swift Cart</title>
-  </head>
-  <body class="text-5xl font-bold max-w-screen-2xl mx-auto">
-    <header>
-      <!-- Navigation Bar -->
-      <nav>
-        <div class="navbar bg-base-100 shadow-sm">
-          <div class="navbar-start">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="pr-2 lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabindex="-1"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-              >
-                <li><a>Home</a></li>
-                <li><a>Products</a></li>
-                <li><a>About</a></li>
-                <li><a>Contact</a></li>
-              </ul>
+  <!--Custom CSS file-->
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Swift Cart</title>
+</head>
+
+<body class="text-5xl font-bold max-w-screen-2xl mx-auto">
+  <header>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="pr-2 lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
-            <a class="cursor-pointer text-xl text-[#452ef5]">SwiftCart</a>
-          </div>
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-medium">
+            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li><a>Home</a></li>
               <li><a>Products</a></li>
               <li><a>About</a></li>
               <li><a>Contact</a></li>
             </ul>
           </div>
-          <div class="navbar-end">
-            <div class=" flex items-center">
-              <i
-                class="text-xl fa-solid fa-cart-shopping"
-              ></i>
+          <a class="cursor-pointer text-xl text-[#452ef5]">SwiftCart</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 font-medium">
+            <li><a>Home</a></li>
+            <li><a>Products</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class=" flex items-center">
+            <i class="text-xl fa-solid fa-cart-shopping"></i>
             </di>
           </div>
         </div>
-      </nav>
-      <!-- Hero Section -->
-      <section>
-        <div class="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url('./Assets/banner-image.png')] bg-no-repeat bg-cover bg-center h-[500px] lg:h-[800px] flex flex-col justify-center">
-                <div class="flex flex-col justify-center h-full space-y-2">
-                    <h1 class="lg:ml-30 ml-5 lg:text-[65px] text-3xl text-white">Best Collection For You</h1>
-                    <p class="lg:ml-30 ml-5 text-sm font-normal text-white w-[90%] lg:w-[35%] mb-5">
-                         Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
-                    </p>
-                    <button class="lg:ml-30 ml-5 btn btn-primary lg:px-12 lg:py-6 px-9 py-6 text-white w-fit">Shop Now</button>
-                </div>
-            </div>
-      </section>
-      <!-- Why choose us section  -->
-      <section>
-        <div class="flex flex-col">
-          <h1 class="text-center font-bold text-normal text-4xl lg:text-5xl mt-20 mb-5">Why Choose Us</h1>
-          <p class="text-center text-sm font-normal">We provide the best shopping experience with top notch services</p>
-          <div class="flex justify-center gap-10 font-normal my-20 flex-col lg:flex-row">
-            <div class="space-y-2 p-5">
-              <i class="fa-solid fa-truck-moving mb-8 text-primary"></i>
-              <h6 class="text-2xl font-bold mb-3">Fast Delivery</h5>
+    </nav>
+    <!-- Hero Section -->
+    <section>
+      <div
+        class="bg-[linear-gradient(to_right,rgba(0,0,0,0.7),rgba(0,0,0,0.4)),url('./Assets/banner-image.png')] bg-no-repeat bg-cover bg-center h-[500px] lg:h-[800px] flex flex-col justify-center">
+        <div class="flex flex-col justify-center h-full space-y-2">
+          <h1 class="lg:ml-30 ml-5 lg:text-[65px] text-3xl text-white">Best Collection For You</h1>
+          <p class="lg:ml-30 ml-5 text-sm font-normal text-white w-[90%] lg:w-[35%] mb-5">
+            Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at SwiftCart.
+          </p>
+          <button class="lg:ml-30 ml-5 btn btn-primary lg:px-12 lg:py-6 px-9 py-6 text-white w-fit">Shop Now</button>
+        </div>
+      </div>
+    </section>
+    <!-- Why choose us section  -->
+    <section>
+      <div class="flex flex-col">
+        <h1 class="text-center font-bold text-normal text-4xl lg:text-5xl mt-20 mb-5">Why Choose Us</h1>
+        <p class="text-center text-sm font-normal">We provide the best shopping experience with top notch services</p>
+        <div class="flex justify-center gap-10 font-normal my-20 flex-col lg:flex-row">
+          <div class="space-y-2 p-5">
+            <i class="fa-solid fa-truck-moving mb-8 text-primary"></i>
+            <h6 class="text-2xl font-bold mb-3">Fast Delivery</h5>
               <p class="text-sm">Get your orders delivered to your doorstep quickly and efficiently.</p>
-            </div>
-            <div class="space-y-2  p-5">
-              <i class="fa-solid fa-headphones mb-8 text-primary"></i>
-              <h5 class="text-2xl font-bold mb-3">24/7 Support</h5>
-              <p class="text-sm">Our supoort team is available around the clock to assist you.</p>
-            </div>
-            <div class="space-y-2 p-5">
-              <i class="fa-solid fa-shield-heart mb-8 text-primary"></i>
-              <h5 class="text-2xl font-bold mb-3">Secure Payment</h5>
-              <p class="text-sm">Experience safe and secure transactions with our encrypted peyment systems.</p>
-            </div>
-            <div class="space-y-2 p-5">
-              <i class="fa-solid fa-arrows-rotate mb-8 text-primary"></i>
-              <h5 class="text-2xl font-bold mb-3">Easy Returns</h5>
-              <p class="text-sm">Not satisfied? return your products easily within 30 days.</p>
-            </div>
+          </div>
+          <div class="space-y-2  p-5">
+            <i class="fa-solid fa-headphones mb-8 text-primary"></i>
+            <h5 class="text-2xl font-bold mb-3">24/7 Support</h5>
+            <p class="text-sm">Our supoort team is available around the clock to assist you.</p>
+          </div>
+          <div class="space-y-2 p-5">
+            <i class="fa-solid fa-shield-heart mb-8 text-primary"></i>
+            <h5 class="text-2xl font-bold mb-3">Secure Payment</h5>
+            <p class="text-sm">Experience safe and secure transactions with our encrypted peyment systems.</p>
+          </div>
+          <div class="space-y-2 p-5">
+            <i class="fa-solid fa-arrows-rotate mb-8 text-primary"></i>
+            <h5 class="text-2xl font-bold mb-3">Easy Returns</h5>
+            <p class="text-sm">Not satisfied? return your products easily within 30 days.</p>
           </div>
         </div>
-      </section>
-      <!-- Trending Section -->
-      <section class="text-sm font-normal">
-        <h1 class="lg:ml-3 text-4xl font-bold mb-5">Trending Now</h1>
-        <!-- Whole Card Section -->
-        <div class="flex justify-center flex-col lg:flex-row gap-5">
-          <!--Single Card-->
+      </div>
+    </section>
+    <!-- Trending Section -->
+    <section class="text-sm font-normal">
+      <h1 class="lg:ml-3 text-4xl font-bold mb-5">Trending Now</h1>
+      <!-- Whole Card Section -->
+      <div class="flex justify-center flex-col lg:flex-row gap-16">
+        <!--Single Card-->
+        <div>
           <div>
-            <div>
-              <img src="./Assets/image1.jpg" class="lg:w-[350px] lg:h-[300px] object-cover" alt="">
-            </div>
-            <div class="flex justify-between mt-3 px-2">
-              <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
-              <div class="flex justify-center gap-1">
-                  <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
-                  <P>4.9(120)</P>
-              </div>
-            </div>
-            <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Leather Backpack</h1>
-            <p class="px-2 mt-1 text-2xl font-medium">$109.85</p>
-            <div class="flex justify-between gap-2 px-2 mt-5">
-              <button class="flex-1 btn btn-outline">Details</button>
-              <button class=" flex-1 btn btn-primary">Add</button>
+            <img src="./Assets/image1.jpg" class="lg:w-[350px] lg:h-[300px] object-cover" alt="">
+          </div>
+          <div class="flex justify-between mt-3 px-2">
+            <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
+            <div class="flex justify-center gap-1">
+              <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
+              <P>4.9(120)</P>
             </div>
           </div>
-          <div>
-            <div>
-              <img src="./Assets/image2.jpg" class="lg:w-[350px] lg:h-[300px] object-cover" alt="">
-            </div>
-            <div class="flex justify-between mt-3 px-2">
-              <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
-              <div class="flex justify-center gap-1">
-                  <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
-                  <P>4.8(220)</P>
-              </div>
-            </div>
-            <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Jeans Jacket</h1>
-            <p class="px-2 mt-1 text-2xl font-medium">$115.85</p>
-            <div class="flex justify-between gap-2 px-2 mt-5">
-              <button class="flex-1 btn btn-outline">Details</button>
-              <button class=" flex-1 btn btn-primary">Add</button>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img src="./Assets/image3.jpg" class="lg:w-[350px] w-[500px] h-[300px] lg:h-[300px] object-cover" alt="">
-            </div>
-            <div class="flex justify-between mt-3 px-2">
-              <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
-              <div class="flex justify-center gap-2">
-                  <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
-                  <P>4.9(320)</P>
-              </div>
-            </div>
-            <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Orange Tshirt</h1>
-            <p class="px-2 mt-1 text-2xl font-medium">$50.85</p>
-            <div class="flex justify-between gap-2 px-2 mt-5">
-              <button class="flex-1 btn btn-outline">Details</button>
-              <button class=" flex-1 btn btn-primary">Add</button>
-            </div>
+          <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Leather Backpack</h1>
+          <p class="px-2 mt-1 text-2xl font-medium">$109.85</p>
+          <div class="flex justify-between gap-2 px-2 mt-5">
+            <button class="flex-1 btn btn-outline">Details</button>
+            <button class=" flex-1 btn btn-primary">Add</button>
           </div>
         </div>
-      </section>
-    </header>
-  </body>
+        <div>
+          <div>
+            <img src="./Assets/image2.jpg" class="lg:w-[350px] lg:h-[300px] object-cover" alt="">
+          </div>
+          <div class="flex justify-between mt-3 px-2">
+            <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
+            <div class="flex justify-center gap-1">
+              <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
+              <P>4.8(220)</P>
+            </div>
+          </div>
+          <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Jeans Jacket</h1>
+          <p class="px-2 mt-1 text-2xl font-medium">$115.85</p>
+          <div class="flex justify-between gap-2 px-2 mt-5">
+            <button class="flex-1 btn btn-outline">Details</button>
+            <button class=" flex-1 btn btn-primary">Add</button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="./Assets/image3.jpg" class="lg:w-[350px] w-[500px] h-[300px] lg:h-[300px] object-cover" alt="">
+          </div>
+          <div class="flex justify-between mt-3 px-2">
+            <p class="bg-primary/30 px-2 py-1 rounded-xl text-sm text-primary font-medium">Mens Clothing</p>
+            <div class="flex justify-center gap-2">
+              <p><i class="fa-solid fa-star text-[#efc518]"></i></p>
+              <P>4.9(320)</P>
+            </div>
+          </div>
+          <h1 class=" px-2 mt-3 text-2xl font-medium">Mens Orange Tshirt</h1>
+          <p class="px-2 mt-1 text-2xl font-medium">$50.85</p>
+          <div class="flex justify-between gap-2 px-2 mt-5">
+            <button class="flex-1 btn btn-outline">Details</button>
+            <button class=" flex-1 btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Newsletter-->
+    <section class="my-20">
+      <h1 class="lg:ml-3 text-4xl font-bold mb-5 text-center">Subscribe to our Newsletter</h1>
+      <div class="flex justify-center flex-col lg:flex-row gap-5 ">
+        <div>
+          <!-- newsletter image -->
+          <img src="./Assets/newsletter.jpg" class="lg:w-[800px] lg:h-[700px]" alt="">
+        </div>
+        <div class="flex justify-center flex-col space-y-5">
+          <!-- email subscribe field -->
+          <h1 class="text-3xl font-bold text-center lg:w-[70%] ">Subscribe to our Newsletter To Get Latest Updates</h1>
+          <div class="space-y-4">
+            <input type="email" placeholder="Type Your Email"
+              class="input input-info text-sm font-normal lg:ml-25 ml-9" />
+            <button class="btn btn-primary lg:ml-45 ml-30 px-10 py-6">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer sm:footer-horizontal text-base-content text-white font-normal p-10 bg-[#1e2939]">
+      <div>
+        <h1 class="text-2xl text-primary font-bold">SwiftCart</h1>
+        <p class="text-sm text-gray-100 lg:w-96 text-left "> Your one-stop shop for all your fashion and lifestyle
+          needs. Quality
+          products, fast delivery, and excellent
+          support</p>
+      </div>
+      <nav>
+        <h6 class="footer-title">Quick Links</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Products</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Support</h6>
+        <a class="link link-hover">FAQ</a>
+        <a class="link link-hover">Shipping</a>
+        <a class="link link-hover">Returns</a>
+        <a class="link link-hover">Privacy Policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title mt-8">Subscribe to our Newsletter</h6>
+        <p>The latest news, articles, and resources, sent to your inbox weekly</p>
+        <fieldset class="w-80">
+          <label>Enter your email address</label>
+          <div class="join mt-3">
+            <input type="text" placeholder="username@site.com" class="input input-bordered join-item" />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+  </header>
+</body>
+
 </html>
